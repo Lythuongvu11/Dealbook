@@ -1,3 +1,5 @@
+let list_user = [];
+
 $(function () {
     $('.khoisanpham').slick({
         dots: false,
@@ -156,53 +158,53 @@ $(function () {
     });
 
     // validate
-    $("#form-signup").validate({
-        rules: {
-            name: {
-                required: true,
-            },
-            phone: {
-                required: true,
-                minlength: 8
-            },
-            password: {
-                required: true,
-                minlength: 6
-            },
-            confirm_password: {
-                required: true,
-                minlength: 6,
-                equalTo: "#inputPassword"
-            },
-            email: {
-                required: true,
-                email: true
-            }
-        },
-        messages: {
-            name: {
-                required: "Vui lòng nhập họ và tên",
-            },
-            phone: {
-                required: "Vui lòng nhập số điện thoại",
-                minlength: "Số máy quý khách vừa nhập là số không có thực"
-            },
-            password: {
-                required: 'Vui lòng nhập mật khẩu',
-                minlength: 'Vui lòng nhập ít nhất 6 kí tự'
-            },
-            confirm_password: {
-                required: 'Vui lòng nhập lại mật khẩu',
-                minlength: 'Vui lòng nhập ít nhất 6 kí tự',
-                equalTo: 'Mật khẩu không trùng'
-            },
-            email: {
-                required: "Vui lòng nhập email",
-                minlength: "Email không hợp lệ",
-                email: "Vui lòng nhập email",
-            }
-        }
-    });
+    // $("#form-signup").validate({
+    //     rules: {
+    //         name: {
+    //             required: true,
+    //         },
+    //         phone: {
+    //             required: true,
+    //             minlength: 8
+    //         },
+    //         password: {
+    //             required: true,
+    //             minlength: 6
+    //         },
+    //         confirm_password: {
+    //             required: true,
+    //             minlength: 6,
+    //             equalTo: "#inputPassword"
+    //         },
+    //         email: {
+    //             required: true,
+    //             email: true
+    //         }
+    //     },
+    //     messages: {
+    //         name: {
+    //             required: "Vui lòng nhập họ và tên",
+    //         },
+    //         phone: {
+    //             required: "Vui lòng nhập số điện thoại",
+    //             minlength: "Số máy quý khách vừa nhập là số không có thực"
+    //         },
+    //         password: {
+    //             required: 'Vui lòng nhập mật khẩu',
+    //             minlength: 'Vui lòng nhập ít nhất 6 kí tự'
+    //         },
+    //         confirm_password: {
+    //             required: 'Vui lòng nhập lại mật khẩu',
+    //             minlength: 'Vui lòng nhập ít nhất 6 kí tự',
+    //             equalTo: 'Mật khẩu không trùng'
+    //         },
+    //         email: {
+    //             required: "Vui lòng nhập email",
+    //             minlength: "Email không hợp lệ",
+    //             email: "Vui lòng nhập email",
+    //         }
+    //     }
+    // });
 
     $("#form-signin").validate({
         rules: {
@@ -228,53 +230,53 @@ $(function () {
         }
     });
 
-    $("#form-signup-cart").validate({
-        rules: {
-            name: {
-                required: true,
-            },
-            phone: {
-                required: true,
-                minlength: 8
-            },
-            password: {
-                required: true,
-                minlength: 6
-            },
-            confirm_password: {
-                required: true,
-                minlength: 6,
-                equalTo: "#inputPassword"
-            },
-            email: {
-                required: true,
-                email: true
-            }
-        },
-        messages: {
-            name: {
-                required: "Vui lòng nhập họ và tên",
-            },
-            phone: {
-                required: "Vui lòng nhập số điện thoại",
-                minlength: "Số máy quý khách vừa nhập là số không có thực"
-            },
-            password: {
-                required: 'Vui lòng nhập mật khẩu',
-                minlength: 'Vui lòng nhập ít nhất 6 kí tự'
-            },
-            confirm_password: {
-                required: 'Vui lòng nhập lại mật khẩu',
-                minlength: 'Vui lòng nhập ít nhất 6 kí tự',
-                equalTo: 'Mật khẩu không trùng'
-            },
-            email: {
-                required: "Vui lòng nhập email",
-                minlength: "Email không hợp lệ",
-                email: "Vui lòng nhập email",
-            }
-        }
-    });
+    // $("#form-signup-cart").validate({
+    //     rules: {
+    //         name: {
+    //             required: true,
+    //         },
+    //         phone: {
+    //             required: true,
+    //             minlength: 8
+    //         },
+    //         password: {
+    //             required: true,
+    //             minlength: 6
+    //         },
+    //         confirm_password: {
+    //             required: true,
+    //             minlength: 6,
+    //             equalTo: "#inputPassword"
+    //         },
+    //         email: {
+    //             required: true,
+    //             email: true
+    //         }
+    //     },
+    //     messages: {
+    //         name: {
+    //             required: "Vui lòng nhập họ và tên",
+    //         },
+    //         phone: {
+    //             required: "Vui lòng nhập số điện thoại",
+    //             minlength: "Số máy quý khách vừa nhập là số không có thực"
+    //         },
+    //         password: {
+    //             required: 'Vui lòng nhập mật khẩu',
+    //             minlength: 'Vui lòng nhập ít nhất 6 kí tự'
+    //         },
+    //         confirm_password: {
+    //             required: 'Vui lòng nhập lại mật khẩu',
+    //             minlength: 'Vui lòng nhập ít nhất 6 kí tự',
+    //             equalTo: 'Mật khẩu không trùng'
+    //         },
+    //         email: {
+    //             required: "Vui lòng nhập email",
+    //             minlength: "Email không hợp lệ",
+    //             email: "Vui lòng nhập email",
+    //         }
+    //     }
+    // });
 
     $("#form-signin-cart").validate({
         rules: {
@@ -498,3 +500,57 @@ $(function () {
     });
 
 });
+
+function signup(){
+    let fullname_val= $("#fullname").val();
+    let nuberphone_val= $("#number-phone").val();
+    let email_val= $("#input-email").val();
+    let password_val= $("#input-password").val();
+    let repassword_val= $("#input-repassword").val();
+    const user ={
+        fullname: fullname_val,
+        numberphone: nuberphone_val,
+        email: email_val,
+        password: password_val,
+        repassword: repassword_val
+    }
+    list_user=JSON.parse(window.localStorage.getItem("list_user"));
+    list_user.push(user);
+    window.localStorage.setItem("list_user",JSON.stringify(list_user));
+    alert("Đăng kí thành công");
+    reset_form();
+}
+
+function reset_form(){
+    $("#fullname").val("");
+    $("#number-phone").val("");
+    $("#input-email").val("");
+    $("#input-password").val("");
+    $("#input-repassword").val("");
+}
+function signin(){
+    let signname_val= $("#signname").val();
+    let signpassword_val= $("#signpassword").val();
+    list_user=JSON.parse(window.localStorage.getItem("list_user"));
+    for(let i=0;i<list_user.length;i++){
+        if(
+            list_user[i].email==signname_val && 
+            list_user[i].password==signpassword_val
+        )
+        {
+            alert("Đăng nhập thành công")
+            $('#formdangnhap').modal("hide");
+            reset_form_dangnhap();
+            break;
+        }
+        else alert("Sai thông tin đăng nhập")
+    }
+    
+}
+
+function reset_form_dangnhap(){
+    $("#signname").val("");
+    $("#signpassword").val("");
+    
+}
+
